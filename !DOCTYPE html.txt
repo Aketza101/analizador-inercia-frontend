@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Inercia Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using heatmap.js from a reliable CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.2/heatmap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Analizador de Inercia Digital</h1>
+            <p>Visualiza las áreas de baja saliencia (Inercia) en tus imágenes.</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="imageUrl" placeholder="Pega aquí la URL de la imagen (ej: https://i.imgur.com/...)" value="https://picsum.photos/600/400">
+            <button id="analyzeBtn">Analizar Inercia</button>
+        </div>
+
+        <div id="statusMessage" class="status"></div>
+
+        <div class="results-section hidden" id="resultsSection">
+            <div class="image-wrapper" id="imageWrapper">
+                <img id="sourceImage" src="" alt="Imagen a analizar" crossorigin="anonymous">
+                <div id="heatmapOverlay"></div>
+            </div>
+            <div class="legend">
+                <div class="gradient-bar"></div>
+                <div class="labels">
+                    <span>Alta Saliencia (Baja Inercia)</span>
+                    <span>Baja Saliencia (Alta Inercia)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
