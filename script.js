@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 1. Send Request to API
-            const response = await fetch('http://localhost:5000/analizar-inercia', {
+            const response = await fetch('https://analizador-inercia-backend.onrender.com/analizar-inercia', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -140,3 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
         statusMessage.style.color = isError ? '#e74c3c' : '#27ae60';
     }
 });
+
